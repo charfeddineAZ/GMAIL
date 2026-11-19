@@ -1,0 +1,653 @@
+FUNCTION/OBJECT: <module>
+  line=1 argcount=0 locals=()
+  names=('CONFIG_DIR', 'DATA_DIR', 'sys', 'os', 'path', 'insert', 'config', 'YOUR_BIRTHDAY', 'YOUR_GENDER', 'YOUR_PASSWORD', 'FIVESIM_API_KEY', 'FIVESIM_COUNTRY', 'FIVESIM_OPERATOR', 'USE_ARABIC_NAMES', 'NAMES_FILE', 'ImportError', 'join', 'password_file', 'open', 'f', 'read', 'strip', 'your_password', 'FileNotFoundError', 'print', 'fivesim_file', 'your_birthday', 'your_gender', 'load_user_agents', 'get_default_user_agents', 'user_agents', 'load_names_from_file', 'names_list', 'arabic_first_names', 'arabic_last_names', 'selenium', 'webdriver', 'selenium.webdriver.common.by', 'By', 'selenium.webdriver.support.wait', 'WebDriverWait', 'selenium.webdriver.support', 'expected_conditions', 'EC', 'selenium.webdriver.chrome.service', 'Service', 'ChromeService', 'selenium.webdriver.chrome.options', 'Options', 'ChromeOptions', 'random', 'time', 'requests', 'unidecode', 'uuid', 'fp.fp', 'FreeProxy', 'rich.console', 'Console', 'rich.panel', 'Panel', 'rich.progress', 'Progress', 'SpinnerColumn', 'TextColumn', 'BarColumn', 'TaskProgressColumn', 'rich.table', 'Table', 'rich.prompt', 'Prompt', 'Confirm', 'rich.live', 'Live', 'rich.text', 'Text', 'json', 'threading', 'datetime', 'selenium.webdriver', 'ActionChains', 're', 'bs4', 'BeautifulSoup', 'webdriver_manager.chrome', 'ChromeDriverManager', 'webdriver_manager.core.os_manager', 'ChromeType', 'platform', 'subprocess', 'zipfile', 'shutil', 'string', 'selenium.webdriver.support.select', 'Select', 'console', 'CONFIG', 'get_matrix_animation', 'show_beautiful_banner', 'show_beautiful_menu', 'show_creation_progress', 'save_account', 'view_statistics', 'human_typing', 'human_click', 'warm_up_session', 'try_set_gender', 'try_set_month', 'try_click_month_dropdown', 'try_click_gender_dropdown', 'create_account', 'update_progress_with_animation', 'click_next_button', 'smart_find_element', 'fill_field_smart', 'validate_birthday', 'generate_realistic_name', 'bypass_phone_verification', 'handle_verification_smart', 'get_5sim_phone_number', 'get_5sim_verification_code', 'get_temp_phone_number', 'get_verification_code_smart', 'generate_temp_email', 'safe_click', 'create_driver', 'main', '__name__')
+  strings/numbers:
+    'config'
+    'data'
+    0
+    None
+    '2 4 1950'
+    '1'
+    ''
+    'usa'
+    'any'
+    True
+    'names.txt'
+    'password.txt'
+    'r'
+    'utf-8'
+    'Error: config/password.txt file not found! Please create it.'
+    '5sim_config.txt'
+    '2.0.0'
+    'cyan'
+    'magenta'
+    'green'
+    'red'
+    'yellow'
+    '__main__'
+  FUNCTION/OBJECT: load_user_agents
+    line=48 argcount=0 locals=('user_agents_list', 'user_agents_file', 'f', 'line')
+    names=('os', 'path', 'join', 'CONFIG_DIR', 'open', 'strip', 'startswith', 'append', 'get_default_user_agents', 'FileNotFoundError')
+    strings/numbers:
+      'Load user agents from config/user_agents.txt file'
+      'user_agents.txt'
+      'r'
+      'utf-8'
+      '#'
+      None
+  FUNCTION/OBJECT: get_default_user_agents
+    line=62 argcount=0 locals=()
+    names=()
+    strings/numbers:
+      'Default user agents fallback'
+  FUNCTION/OBJECT: load_names_from_file
+    line=74 argcount=0 locals=('names_list', 'names_file', 'f', 'line')
+    names=('os', 'path', 'exists', 'NAMES_FILE', 'join', 'DATA_DIR', 'open', 'strip', 'startswith', 'append', 'FileNotFoundError')
+    strings/numbers:
+      'Load names from names.txt file'
+      'names.txt'
+      'r'
+      'utf-8'
+      '#'
+      ' '
+      None
+  FUNCTION/OBJECT: get_matrix_animation
+    line=151 argcount=0 locals=('frames', 'chars', 'i', 'frame', '_', 'line')
+    names=('range', 'join', 'random', 'choice', 'CONFIG', 'append')
+    strings/numbers:
+      'Matrix-style code rain animation frames'
+      '01█▓▒░'
+      4
+      ''
+      3
+      40
+      '['
+      'success_color'
+      ']'
+      '[/]\n'
+  FUNCTION/OBJECT: show_beautiful_banner
+    line=163 argcount=0 locals=('banner', 'features', 'feature_text', 'copyright_info')
+    names=('CONFIG', 'join', 'console', 'print', 'Panel')
+    strings/numbers:
+      'Display a beautiful banner with animations'
+      '\n['
+      'theme_color'
+      ']\n██████╗ ███╗   ███╗ █████╗ ██╗██╗         ██████╗██████╗ ███████╗ █████╗ ████████╗ ██████╗ ██████╗ \n██╔════╝████╗ ████║██╔══██╗██║██║        ██╔════╝██╔══██╗██╔════╝██╔══██╗╚══██╔══╝██╔═══██╗██╔══██╗\n██║  ███╗██╔████╔██║███████║██║██║        ██║     ██████╔╝█████╗  ███████║   ██║   ██║   ██║██████╔╝\n██║   ██║██║╚██╔╝██║██╔══██║██║██║        ██║     ██╔══██╗██╔══╝  ██╔══██║   ██║   ██║   ██║██╔══██╗\n╚██████╔╝██║ ╚═╝ ██║██║  ██║██║███████╗   ╚██████╗██║  ██║███████╗██║  ██║   ██║   ╚██████╔╝██║  ██║\n ╚═════╝ ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝╚══════╝    ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝\n[/]\n\n['
+      'secondary_color'
+      ']✨ The Ultimate Gmail Account Creator v'
+      'version'
+      ' ✨[/]\n'
+      '\n'
+      'warning_color'
+      ']━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/]\n['
+      ']© 2025 Shadow Hacker - All Rights Reserved[/]\n['
+      ']🌐 Website: https://www.shadowhackr.com[/]\n['
+      ']📘 Facebook: www.facebook.com/ShadowHackr[/]\n['
+      ']📱 WhatsApp: +962796668987[/]\n['
+      ']━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/]\n'
+      '\n\n'
+      '[bold]Welcome to Gmail Creator Pro[/]'
+      '[bold]By SHADOWHACKER[/]'
+      None
+    FUNCTION/OBJECT: <genexpr>
+      line=190 argcount=1 locals=('.0', 'feature')
+      names=('CONFIG',)
+      strings/numbers:
+        '['
+        'success_color'
+        ']✓[/] ['
+        'theme_color'
+        ']'
+        '[/]'
+        None
+  FUNCTION/OBJECT: show_beautiful_menu
+    line=210 argcount=0 locals=('menu_items', 'menu_text')
+    names=('join', 'console', 'print', 'Panel', 'CONFIG')
+    strings/numbers:
+      'Display a beautiful menu with animations'
+      '\n'
+      '[bold]Menu Options[/]'
+      'theme_color'
+      None
+    FUNCTION/OBJECT: <genexpr>
+      line=220 argcount=1 locals=('.0', 'num', 'title', 'desc')
+      names=('CONFIG',)
+      strings/numbers:
+        '['
+        'theme_color'
+        ']'
+        '.[/] ['
+        'secondary_color'
+        '[/]\n   ['
+        'warning_color'
+        '[/]'
+        None
+  FUNCTION/OBJECT: show_creation_progress
+    line=232 argcount=2 locals=('current', 'total', 'progress', 'overall_task', 'account_task', 'step', 'desc')
+    names=('Progress', 'SpinnerColumn', 'TextColumn', 'BarColumn', 'CONFIG', 'TaskProgressColumn', 'console', 'add_task', 'update', 'time', 'sleep')
+    strings/numbers:
+      'Show beautiful progress bars for account creation'
+      '[progress.description]{task.description}'
+      'theme_color'
+      '['
+      ']Overall Progress'
+      ']Current Account'
+      100
+      ']'
+      0.5
+      1
+      0
+      None
+  FUNCTION/OBJECT: save_account
+    line=264 argcount=2 locals=('email', 'password', 'accounts_file', 'accounts', 'f', 'e')
+    names=('os', 'path', 'join', 'DATA_DIR', 'makedirs', 'exists', 'open', 'json', 'load', 'append', 'datetime', 'now', 'strftime', 'dump', 'console', 'print', 'CONFIG', 'Exception', 'str')
+    strings/numbers:
+      'Save account details with encryption'
+      'accounts.json'
+      True
+      'r'
+      None
+      '%Y-%m-%d %H:%M:%S'
+      'active'
+      'w'
+      4
+      '['
+      'success_color'
+      ']✓ Account saved successfully![/]'
+      'error_color'
+      ']Error saving account: '
+      '[/]'
+  FUNCTION/OBJECT: view_statistics
+    line=292 argcount=0 locals=('accounts_file', 'f', 'accounts', 'total', 'active', 'success_rate', 'stats_table', 'e')
+    names=('os', 'path', 'join', 'DATA_DIR', 'open', 'json', 'load', 'len', 'sum', 'Table', 'CONFIG', 'add_column', 'add_row', 'str', 'console', 'print', 'Panel', 'Exception')
+    strings/numbers:
+      'Show beautiful statistics dashboard'
+      'accounts.json'
+      'r'
+      None
+      0
+      100
+      '['
+      'theme_color'
+      ']Account Creation Statistics[/]'
+      True
+      'bold'
+      'Metric'
+      'Value'
+      'right'
+      'success_color'
+      'Total Accounts Created'
+      'Active Accounts'
+      'Success Rate'
+      '.1f'
+      '%'
+      'Last Creation'
+      -1
+      'created_at'
+      'N/A'
+      'error_color'
+      ']Error loading statistics: '
+      '[/]'
+    FUNCTION/OBJECT: <genexpr>
+      line=300 argcount=1 locals=('.0', 'acc')
+      names=()
+      strings/numbers:
+        'status'
+        'active'
+        1
+        None
+  FUNCTION/OBJECT: human_typing
+    line=322 argcount=3 locals=('element', 'text', 'delay_range', 'char')
+    names=('send_keys', 'time', 'sleep', 'random', 'uniform')
+    strings/numbers:
+      None
+  FUNCTION/OBJECT: human_click
+    line=327 argcount=2 locals=('driver', 'element', 'actions')
+    names=('ActionChains', 'move_to_element', 'pause', 'random', 'uniform', 'click', 'perform', 'time', 'sleep')
+    strings/numbers:
+      None
+      0.2
+      0.5
+      1.2
+  FUNCTION/OBJECT: warm_up_session
+    line=333 argcount=1 locals=('driver', 'search_box', 'queries', 'query', 'links', 'e')
+    names=('print', 'get', 'time', 'sleep', 'random', 'uniform', 'find_element', 'By', 'NAME', 'choice', 'send_keys', 'submit', 'find_elements', 'XPATH', 'click', 'Exception')
+    strings/numbers:
+      None
+      '🔥 Warming up browsing session...'
+      'https://www.google.com/'
+      5
+      8
+      'q'
+      '🔍 Searched: '
+      6
+      10
+      '//h3'
+      '🌐 Browsed first result...'
+      12
+      'https://www.bbc.com/'
+      'https://www.wikipedia.org/'
+      'https://www.google.com/maps'
+      '🗺️ Opened Google Maps...'
+      'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+      '🎬 Watching YouTube video...'
+      15
+      25
+      '✅ Session warmed up!'
+      '⚠️ Error warming session: '
+  FUNCTION/OBJECT: try_set_gender
+    line=370 argcount=2 locals=('driver', 'gender_values', 'value', 'gender_elem', 'select', 'result')
+    names=('find_element', 'By', 'CSS_SELECTOR', 'Select', 'select_by_value', 'select_by_visible_text', 'get_attribute', 'lower', 'execute_script')
+    strings/numbers:
+      None
+      'select#gender, select[aria-label="Gender"]'
+      'value'
+      True
+      '\n            let genderSelect = document.querySelector(\'select#gender\') || \n                                 document.querySelector(\'select[aria-label="Gender"]\');\n            if (genderSelect) {\n                genderSelect.value = arguments[0];\n                genderSelect.dispatchEvent(new Event(\'change\', { bubbles: true }));\n            }\n        '
+      '\n            let genderSelect = document.querySelector(\'select#gender\') || \n                                 document.querySelector(\'select[aria-label="Gender"]\');\n            return genderSelect ? genderSelect.value : null;\n        '
+      False
+  FUNCTION/OBJECT: try_set_month
+    line=406 argcount=2 locals=('driver', 'month_values', 'value', 'month_elem', 'select', 'result')
+    names=('find_element', 'By', 'CSS_SELECTOR', 'Select', 'select_by_value', 'select_by_visible_text', 'get_attribute', 'lower', 'execute_script')
+    strings/numbers:
+      None
+      'select#month, select[aria-label="Month"], select[name="month"]'
+      'value'
+      True
+      '\n            function setMonthValue(value) {\n                let monthSelect = document.querySelector(\'select#month\') || \n                                  document.querySelector(\'select[aria-label="Month"]\') ||\n                                  document.querySelector(\'select[name="month"]\');\n                if (monthSelect) {\n                    monthSelect.value = arguments[0];\n                    monthSelect.dispatchEvent(new Event(\'change\', { bubbles: true }));\n                    for (let i = 0; i < monthSelect.options.length; i++) {\n                        if (monthSelect.options[i].value === arguments[0]) {\n                            monthSelect.selectedIndex = i;\n                            break;\n                        }\n                    }\n                    monthSelect.dispatchEvent(new Event(\'input\', { bubbles: true }));\n                    monthSelect.dispatchEvent(new Event(\'change\', { bubbles: true }));\n                }\n            ...
+      '\n            let monthSelect = document.querySelector(\'select#month\') || \n                                  document.querySelector(\'select[aria-label="Month"]\') ||\n                                  document.querySelector(\'select[name="month"]\');\n            return monthSelect ? monthSelect.value : null;\n        '
+      False
+  FUNCTION/OBJECT: try_click_month_dropdown
+    line=455 argcount=2 locals=('driver', 'month_name', 'month_dropdown', 'options', 'option', 'e')
+    names=('find_element', 'By', 'XPATH', 'click', 'time', 'sleep', 'find_elements', 'strip', 'lower', 'text', 'Exception')
+    strings/numbers:
+      None
+      '//*[@id="month"]/div/div[1]/div'
+      1
+      '//*[@id="month"]/div/div[2]/ul/li'
+      True
+      False
+  FUNCTION/OBJECT: try_click_gender_dropdown
+    line=470 argcount=2 locals=('driver', 'gender_text', 'gender_dropdown', 'options', 'option', 'e')
+    names=('find_element', 'By', 'XPATH', 'click', 'time', 'sleep', 'find_elements', 'strip', 'lower', 'text', 'Exception')
+    strings/numbers:
+      None
+      '//*[@id="gender"]/div/div[1]/div'
+      1
+      '//*[@id="gender"]/div/div[2]/ul/li'
+      True
+      False
+  FUNCTION/OBJECT: create_account
+    line=485 argcount=6 locals=('driver', 'wait', 'progress', 'task_id', 'your_username', 'your_password', 'max_retries', 'success', 'attempt', 'e', 'first_name', 'last_name', 'month', 'day', 'year', 'month_names', 'month_values', 'month_selected', 'gender_values', 'gender_texts', 'gender_selected', 'gtext', 'heading_xpaths', 'heading_found', 'hx', 'create_own_option', 'xpath_selectors', 'xpath', 'elements', 'element', 'radio_button', 'username_field', 'field_selectors', 'selector', 'next_button', 'button_selectors', 'password_field', 'confirm_field', 'char', 'show_password')
+    names=('update_progress_with_animation', 'range', 'delete_all_cookies', 'execute_script', 'get', 'until', 'EC', 'presence_of_element_located', 'By', 'NAME', 'Exception', 'str', 'time', 'sleep', 'refresh', 'generate_realistic_name', 'validate_birthday', 'your_birthday', 'int', 'isdigit', 'append', 'try_set_month', 'try_click_month_dropdown', 'your_gender', 'try_set_gender', 'try_click_gender_dropdown', 'XPATH', 'find_elements', 'is_displayed', 'click', 'find_element', 'is_enabled', 'clear', 'send_keys', 'ActionChains', 'move_to_element', 'perform', 'element_to_be_clickable', 'get_attribute', 'handle_verification_smart', 'save_account', 'console', 'print', 'CONFIG')
+    strings/numbers:
+      None
+      'Opening Gmail signup'
+      10
+      3
+      False
+      'window.localStorage.clear();'
+      'window.sessionStorage.clear();'
+      'https://accounts.google.com/signup/v2/webcreateaccount?flowName=GlifWebSignIn&flowEntry=SignUp'
+      'firstName'
+      True
+      1
+      'Could not load signup page: '
+      2
+      'Failed to load signup page after multiple attempts'
+      '\n            let firstNameField = document.querySelector(\'input[name="firstName"]\');\n            if (firstNameField) {\n                firstNameField.value = arguments[0];\n                firstNameField.dispatchEvent(new Event(\'input\', { bubbles: true }));\n                firstNameField.dispatchEvent(new Event(\'change\', { bubbles: true }));\n            }\n        '
+      '\n            let lastNameField = document.querySelector(\'input[name="lastName"]\');\n            if (lastNameField) {\n                lastNameField.value = arguments[0];\n                lastNameField.dispatchEvent(new Event(\'input\', { bubbles: true }));\n                lastNameField.dispatchEvent(new Event(\'change\', { bubbles: true }));\n            }\n        '
+      1.5
+      "\n            let nextButton = Array.from(document.querySelectorAll('button')).find(button => \n                button.textContent.toLowerCase().includes('next'));\n            if (nextButton) nextButton.click();\n        "
+      12
+      '\n            // Fill day\n            let dayField = document.querySelector(\'input[name="day"]\');\n            if (dayField) {\n                dayField.value = arguments[0];\n                dayField.dispatchEvent(new Event(\'input\', { bubbles: true }));\n                dayField.dispatchEvent(new Event(\'change\', { bubbles: true }));\n            }\n            // Fill year\n            let yearField = document.querySelector(\'input[name="year"]\');\n            if (yearField) {\n                yearField.value = arguments[1];\n                yearField.dispatchEvent(new Event(\'input\', { bubbles: true }));\n                yearField.dispatchEvent(new Event(\'change\', { bubbles: true }));\n            }\n        '
+      '1'
+      '2'
+      '3'
+      'MALE'
+      'FEMALE'
+      'OTHER'
+      'ذكر'
+      'أنثى'
+      'اخرى'
+      '\n            function clickNext() {\n                // Try multiple methods to find the next button\n                let nextButton = Array.from(document.querySelectorAll(\'button\')).find(button => \n                    button.textContent.toLowerCase().includes(\'next\')) ||\n                    document.querySelector(\'button[type="submit"]\') ||\n                    document.querySelector(\'button.VfPpkd-LgbsSe\');\n                \n                if (nextButton) {\n                    nextButton.click();\n                    return true;\n                }\n                return false;\n            }\n            return clickNext();\n        '
+      'Email-selection heading not found (UI text may have changed).'
+      'arguments[0].scrollIntoView(true);'
+      "//input[@type='radio' and following-sibling::*[contains(text(), 'Create your own')]]"
+      'arguments[0].click();'
+      0.5
+      'arguments[0].value = arguments[1];'
+      'Entering password'
+      80
+      'Passwd'
+      'PasswdAgain'
+      0.1
+      'value'
+      "\n                                    arguments[0].value = arguments[2];\n                                    arguments[0].dispatchEvent(new Event('input', { bubbles: true }));\n                                    arguments[0].dispatchEvent(new Event('change', { bubbles: true }));\n                                    arguments[1].value = arguments[2];\n                                    arguments[1].dispatchEvent(new Event('input', { bubbles: true }));\n                                    arguments[1].dispatchEvent(new Event('change', { bubbles: true }));\n                                "
+      "//input[@type='checkbox']"
+      "//button[contains(@class, 'VfPpkd-LgbsSe') and contains(@class, 'VfPpkd-LgbsSe-OWXEXe-k8QpJ')]"
+      'Account created successfully!'
+      100
+      '@gmail.com'
+      '['
+      'error_color'
+      ']Failed to proceed after password entry[/]'
+      ']Error in password entry: '
+      '[/]'
+      ']Could not find password fields[/]'
+      ']Could not find username field[/]'
+      "]Could not find 'Create your own Gmail address' option[/]"
+      ']Error in email selection: '
+      ']Error creating account: '
+    FUNCTION/OBJECT: <lambda>
+      line=838 argcount=1 locals=('driver',)
+      names=('len', 'find_elements', 'By', 'NAME')
+      strings/numbers:
+        None
+        'Passwd'
+        0
+  FUNCTION/OBJECT: update_progress_with_animation
+    line=868 argcount=4 locals=('progress', 'task_id', 'message', 'percentage', 'current', 'steps', 'step_size', 'i', 'new_percentage')
+    names=('tasks', 'completed', 'range', 'update', 'CONFIG', 'time', 'sleep')
+    strings/numbers:
+      'Update progress with smooth animation'
+      10
+      1
+      '['
+      'theme_color'
+      ']'
+      '...[/]'
+      0.05
+      None
+  FUNCTION/OBJECT: click_next_button
+    line=881 argcount=1 locals=('driver', 'next_button_selectors', 'selector', 'buttons', 'button')
+    names=('find_elements', 'By', 'XPATH', 'is_displayed', 'safe_click')
+    strings/numbers:
+      'Smart next button detection and click'
+      False
+  FUNCTION/OBJECT: smart_find_element
+    line=900 argcount=2 locals=('driver', 'selectors', 'by', 'value', 'element')
+    names=('wait_and_find_element', 'is_displayed')
+    strings/numbers:
+      'Find element using multiple selectors'
+      5
+      None
+  FUNCTION/OBJECT: fill_field_smart
+    line=911 argcount=3 locals=('driver', 'field', 'value', 'methods', 'method')
+    names=()
+    strings/numbers:
+      'Fill field using multiple methods'
+      True
+      False
+    FUNCTION/OBJECT: <lambda>
+      line=914 argcount=0 locals=()
+      names=('send_keys',)
+      strings/numbers:
+        None
+    FUNCTION/OBJECT: <lambda>
+      line=915 argcount=0 locals=()
+      names=('execute_script',)
+      strings/numbers:
+        None
+        'arguments[0].value = arguments[1]'
+    FUNCTION/OBJECT: <lambda>
+      line=916 argcount=0 locals=()
+      names=('ActionChains', 'move_to_element', 'click', 'send_keys', 'perform')
+      strings/numbers:
+        None
+  FUNCTION/OBJECT: validate_birthday
+    line=928 argcount=1 locals=('birthday_str', 'month', 'day', 'year')
+    names=('split', 'str', 'int')
+    strings/numbers:
+      'Validate and parse birthday string'
+      1
+      12
+      '1'
+      31
+      1900
+      2010
+      '1990'
+  FUNCTION/OBJECT: generate_realistic_name
+    line=952 argcount=0 locals=('full_name',)
+    names=('names_list', 'random', 'choice', 'print', 'randint')
+    strings/numbers:
+      'Generate names from external file only - NO fallback'
+      ' '
+      'Error: names.txt is empty or not found! Please add names to names.txt'
+      'User'
+      1000
+      9999
+  FUNCTION/OBJECT: bypass_phone_verification
+    line=969 argcount=2 locals=('driver', 'wait', 'skip_button_selectors', 'selector', 'skip_button', 'alternative_selectors', 'alternative_button', 'skip_options', 'skip_sel', 'skip_btn', 'close_selectors', 'close_btn', 'e')
+    names=('console', 'print', 'CONFIG', 'WebDriverWait', 'until', 'EC', 'element_to_be_clickable', 'By', 'XPATH', 'execute_script', 'time', 'sleep', 'find_element', 'is_displayed', 'Exception', 'str')
+    strings/numbers:
+      'Enhanced phone verification bypass with multiple strategies'
+      '['
+      'warning_color'
+      ']Attempting to skip phone verification...[/]'
+      3
+      'arguments[0].click();'
+      2
+      'success_color'
+      ']✓ Skipped phone verification![/]'
+      True
+      ']✓ Skipped via alternative method![/]'
+      False
+      'error_color'
+      ']Error in bypass_phone_verification: '
+      '[/]'
+      None
+  FUNCTION/OBJECT: handle_verification_smart
+    line=1062 argcount=3 locals=('driver', 'wait', 'progress', 'phone_data', 'phone_number', 'phone_input', 'next_button_selectors', 'selector', 'next_btn', 'code_input', 'verification_code', 'verify_button_selectors', 'verify_btn', 'e')
+    names=('update_progress_with_animation', 'tasks', 'id', 'console', 'print', 'CONFIG', 'bypass_phone_verification', 'time', 'sleep', 'find_element', 'By', 'NAME', 'get_temp_phone_number', 'isinstance', 'dict', 'get', 'WebDriverWait', 'until', 'EC', 'presence_of_element_located', 'clear', 'human_typing', 'XPATH', 'is_displayed', 'is_enabled', 'execute_script', 'get_verification_code_smart', 'Exception', 'str')
+    strings/numbers:
+      'Smart phone verification handler with skip and 5sim support'
+      0
+      'Handling phone verification'
+      85
+      '['
+      'warning_color'
+      ']Attempting to bypass phone verification...[/]'
+      2
+      'phoneNumberId'
+      'success_color'
+      ']✓ Successfully bypassed phone verification![/]'
+      True
+      ']Skip failed, trying phone verification with 5sim...[/]'
+      'error_color'
+      ']Could not get phone number. Account creation may fail.[/]'
+      False
+      'phone'
+      10
+      0.5
+      1
+      'arguments[0].click();'
+      3
+      30
+      'code'
+      ']Waiting for verification code from 5sim...[/]'
+      ']Could not get verification code. Trying manual skip...[/]'
+      ']✓ Phone verification completed![/]'
+      ']Error in phone verification: '
+      '[/]'
+      None
+      ']Error in handle_verification_smart: '
+  FUNCTION/OBJECT: get_5sim_phone_number
+    line=1178 argcount=0 locals=('url', 'headers', 'response', 'data', 'phone_number', 'order_id', 'e')
+    names=('FIVESIM_API_KEY', 'console', 'print', 'CONFIG', 'FIVESIM_COUNTRY', 'FIVESIM_OPERATOR', 'requests', 'get', 'status_code', 'json', 'text', 'Exception', 'str')
+    strings/numbers:
+      'Get phone number from 5sim API'
+      '['
+      'error_color'
+      ']5sim API key not configured![/]'
+      None
+      'https://5sim.net/v1/user/buy/activation/'
+      '/'
+      '/google'
+      'Bearer '
+      'application/json'
+      10
+      200
+      'phone'
+      'id'
+      'success_color'
+      ']✓ Got phone number from 5sim: '
+      '[/]'
+      '5sim'
+      ']5sim API error: '
+      ' - '
+      ']Error getting 5sim number: '
+  FUNCTION/OBJECT: get_5sim_verification_code
+    line=1214 argcount=2 locals=('order_id', 'max_wait', 'url', 'headers', 'start_time', 'response', 'data', 'sms', 'latest_sms', 'code_text', 're', 'code_match', 'code', 'e')
+    names=('FIVESIM_API_KEY', 'time', 'requests', 'get', 'status_code', 'json', 'len', 're', 'search', 'group', 'console', 'print', 'CONFIG', 'sleep', 'Exception', 'str')
+    strings/numbers:
+      'Get verification code from 5sim API'
+      None
+      'https://5sim.net/v1/user/check/'
+      'Bearer '
+      'application/json'
+      10
+      200
+      'sms'
+      0
+      'text'
+      ''
+      '\\b\\d{6}\\b'
+      '['
+      'success_color'
+      ']✓ Got verification code: '
+      '[/]'
+      '\\d+'
+      6
+      3
+      'error_color'
+      ']Error getting 5sim code: '
+  FUNCTION/OBJECT: get_temp_phone_number
+    line=1261 argcount=0 locals=('phone_data',)
+    names=('FIVESIM_API_KEY', 'get_5sim_phone_number', 'console', 'print', 'CONFIG')
+    strings/numbers:
+      'Get temporary phone number from multiple services (5sim preferred)'
+      '['
+      'warning_color'
+      ']No phone service available. Please configure 5sim API key.[/]'
+      None
+  FUNCTION/OBJECT: get_verification_code_smart
+    line=1273 argcount=1 locals=('phone_data', 'max_retries', 'attempt')
+    names=('get', 'get_5sim_verification_code', 'range', 'time', 'sleep')
+    strings/numbers:
+      'Get verification code with smart retry'
+      'service'
+      '5sim'
+      'order_id'
+      5
+      2
+      None
+  FUNCTION/OBJECT: generate_temp_email
+    line=1288 argcount=0 locals=('services', 'username', 'domain')
+    names=('join', 'random', 'choices', 'string', 'ascii_lowercase', 'digits', 'choice')
+    strings/numbers:
+      'Generate temporary email from multiple services'
+      ''
+      10
+      '@'
+  FUNCTION/OBJECT: safe_click
+    line=1301 argcount=3 locals=('driver', 'element', 'retries', 'attempt')
+    names=('range', 'execute_script', 'ActionChains', 'move_to_element', 'click', 'perform', 'time', 'sleep')
+    strings/numbers:
+      'Enhanced safe click with multiple methods'
+      'arguments[0].click();'
+      True
+      "\n                            var event = new MouseEvent('click', {\n                                'view': window,\n                                'bubbles': true,\n                                'cancelable': true\n                            });\n                            arguments[0].dispatchEvent(event);\n                        "
+      1
+      False
+  FUNCTION/OBJECT: create_driver
+    line=1336 argcount=0 locals=('chrome_options', 'service', 'max_retries', 'attempt', 'driver', 'e')
+    names=('ChromeOptions', 'add_argument', 'random', 'choice', 'user_agents', 'ChromeService', 'range', 'webdriver', 'Chrome', 'maximize_window', 'set_page_load_timeout', 'execute_script', 'get', 'time', 'sleep', 'Exception', 'str', 'locals', 'quit', 'console', 'print', 'CONFIG')
+    strings/numbers:
+      'Create and configure Chrome driver with optimal settings'
+      '--no-sandbox'
+      '--disable-dev-shm-usage'
+      '--disable-gpu'
+      '--disable-infobars'
+      '--disable-notifications'
+      '--disable-software-rasterizer'
+      '--disable-webgl'
+      '--disable-webgl2'
+      '--disable-logging'
+      '--log-level=3'
+      '--ignore-certificate-errors'
+      '--ignore-ssl-errors'
+      '--no-experiments'
+      '--no-default-browser-check'
+      '--no-first-run'
+      '--disable-blink-features=AutomationControlled'
+      'user-agent='
+      '--disable-extensions'
+      '--disable-popup-blocking'
+      3
+      30
+      "\n                    Object.defineProperty(navigator, 'webdriver', {get: () => undefined});\n                    Object.defineProperty(navigator, 'plugins', {get: () => [1, 2, 3, 4, 5]});\n                    Object.defineProperty(navigator, 'languages', {get: () => ['en-US', 'en']});\n                    Object.defineProperty(navigator, 'platform', {get: () => 'Win32'});\n                "
+      'https://www.google.com'
+      2
+      1
+      'Failed to create browser after '
+      ' attempts: '
+      'driver'
+      None
+      '['
+      'error_color'
+      ']Error creating driver: '
+      '[/]'
+  FUNCTION/OBJECT: main
+    line=1410 argcount=0 locals=('choice', 'num_accounts', 'progress', 'overall_task', 'account_task', 'i', 'driver', 'wait', 'name', 'name_parts', 'first_name', 'last_name', 'username', 'success', 'e')
+    names=('os', 'system', 'name', 'show_beautiful_banner', 'show_beautiful_menu', 'Prompt', 'ask', 'CONFIG', 'int', 'console', 'print', 'Panel', 'Progress', 'SpinnerColumn', 'TextColumn', 'BarColumn', 'TaskProgressColumn', 'add_task', 'range', 'create_driver', 'Exception', 'WebDriverWait', 'generate_realistic_name', 'split', 'len', 'lower', 'random', 'randint', 'create_account', 'your_password', 'quit', 'update', 'str', 'view_statistics', 'input', 'KeyboardInterrupt')
+    strings/numbers:
+      'Main application loop with beautiful UI'
+      'nt'
+      'cls'
+      'clear'
+      '['
+      'theme_color'
+      ']Select an option[/]'
+      '1'
+      ']How many accounts do you want to create?[/]'
+      'success_color'
+      ']Starting creation of '
+      ' accounts...[/]\n['
+      'warning_color'
+      ']Press Ctrl+C to stop the process[/]'
+      '[progress.description]{task.description}'
+      ']Overall Progress'
+      ']Current Account'
+      100
+      'Failed to create browser'
+      10
+      2
+      0
+      -1
+      'user'
+      1000
+      9999
+      ']✓ Account created successfully: '
+      '@gmail.com[/]'
+      'error_color'
+      ']✗ Failed to create account: '
+      1
+      ']Error in account creation cycle: '
+      '[/]'
+      None
+      '2'
+      '3'
+      '4'
+      ']Thanks for using Gmail Creator Pro! Goodbye! 👋[/]'
+      '\n['
+      ']Press Enter to continue...[/]'
+      ']Process interrupted by user.[/]'
+      ']━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/]'
+      ']© 2025 Shadow Hacker - All Rights Reserved[/]'
+      'secondary_color'
+      ']🌐 Website: https://www.shadowhackr.com[/]'
+      ']📘 Facebook: www.facebook.com/ShadowHackr[/]'
+      ']📱 WhatsApp: +962796668987[/]'
+      ']━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/]\n'
+      ']An error occurred: '
